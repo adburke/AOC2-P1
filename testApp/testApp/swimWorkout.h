@@ -10,4 +10,7 @@
 
 @interface swimWorkout : baseWorkout
 
+// Miles
+@property int distance;
+
 @end

@@ -10,4 +10,26 @@
 
 @implementation runWorkout
 
+@synthesize distance;
+
+-(id)init
+{
+    self = [super init];
+    if (self)
+    {
+        [self setDistance:0];
+        [self setCaloriesBurned:0];
+    }
+    return self;
+}
+
+-(NSString *)calculateCaloriesBurned
+{
+    [self setCaloriesBurned:( self.userWeight * .75 * distance ) ];
+    NSString *calBurnedMsg = [[NSString alloc] initWithFormat:@"This workout burned %i calories.", self.caloriesBurned];
+    return calBurnedMsg;
+}
+
 @end
+
+
