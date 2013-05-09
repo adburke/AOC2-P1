@@ -22,7 +22,7 @@
         [squats setReps:10];
         [squats setSets:3];
         [squats setLiftWeight:35];
-        [squats setWorkoutName:@"squat"];
+        [squats setWorkoutName:@"Squat"];
         // Seems like this could be simplified into the setter saving the creation of a variable. Let me know your thoughts.
         // NSArray *squatEquip = @[@"45lb Bar", @"Rubber or Metal Plates"];
         [squats setEquipment:@[@"45lb Bar", @"Rubber or Metal Plates"]];
@@ -62,24 +62,53 @@
         [run10k setEquipment:@[@"Running Shoes", @"Running Shorts", @"Water Bottle"]];
     }
     
-    UILabel *run10k1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 220.0f, 768.0f, 110.0f)];
-    if (run10k1 && run10k) {
-        run10k1.font = [UIFont boldSystemFontOfSize:20.0f];
-        run10k1.backgroundColor = [UIColor orangeColor];
-        run10k1.text = [NSString stringWithFormat:@"The weighted workout you created is named %@.\n It consists of %f miles of running.\n Equipment used: %@", [run10k workoutName], [run10k distance], [run10k.equipment componentsJoinedByString:@", "]];
-        run10k1.textAlignment = NSTextAlignmentCenter;
-        run10k1.numberOfLines = 3;
-        [self.view addSubview:run10k1];
+    UILabel *run10kLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 220.0f, 768.0f, 110.0f)];
+    if (run10kLabel1 && run10k) {
+        run10kLabel1.font = [UIFont boldSystemFontOfSize:20.0f];
+        run10kLabel1.backgroundColor = [UIColor orangeColor];
+        run10kLabel1.text = [NSString stringWithFormat:@"The running workout you created is named %@.\n It consists of %f miles of running.\n Equipment used: %@", [run10k workoutName], [run10k distance], [run10k.equipment componentsJoinedByString:@", "]];
+        run10kLabel1.textAlignment = NSTextAlignmentCenter;
+        run10kLabel1.numberOfLines = 3;
+        [self.view addSubview:run10kLabel1];
     }
     
-    UILabel *run10k2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 340.0f, 768.0f, 60.0f)];
-    if (run10k2 && run10k) {
-        run10k2.font = [UIFont boldSystemFontOfSize:20.0f];
-        run10k2.backgroundColor = [UIColor orangeColor];
-        run10k2.text = [run10k calculateCaloriesBurned];
-        run10k2.textAlignment = NSTextAlignmentCenter;
-        [self.view addSubview:run10k2];
+    UILabel *run10kLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 340.0f, 768.0f, 60.0f)];
+    if (run10kLabel2 && run10k) {
+        run10kLabel2.font = [UIFont boldSystemFontOfSize:20.0f];
+        run10kLabel2.backgroundColor = [UIColor orangeColor];
+        run10kLabel2.text = [run10k calculateCaloriesBurned];
+        run10kLabel2.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:run10kLabel2];
     }
+    
+    // Create a swim workout
+    swimWorkout *swim500m = (swimWorkout*)[workoutFactory createNewWorkout:SWIM];
+    if (swim500m) {
+        [swim500m setLaps:5];
+        [swim500m setUserWeight:160];
+        [swim500m setWorkoutName:@"500m Swim"];
+        [swim500m setEquipment:@[@"Goggles", @"Swim Suit"]];
+    }
+    
+    UILabel *swim500mLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 430.0f, 768.0f, 110.0f)];
+    if (swim500mLabel1 && swim500m) {
+        swim500mLabel1.font = [UIFont boldSystemFontOfSize:20.0f];
+        swim500mLabel1.backgroundColor = [UIColor yellowColor];
+        swim500mLabel1.text = [NSString stringWithFormat:@"The swimming workout you created is named %@.\n It consists of %d laps of swimming in an olympic size pool.\n Equipment used: %@", [swim500m workoutName], [swim500m laps], [swim500m.equipment componentsJoinedByString:@", "]];
+        swim500mLabel1.textAlignment = NSTextAlignmentCenter;
+        swim500mLabel1.numberOfLines = 3;
+        [self.view addSubview:swim500mLabel1];
+    }
+    
+    UILabel *swim500mLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 550.0f, 768.0f, 60.0f)];
+    if (swim500mLabel2 && swim500m) {
+        swim500mLabel2.font = [UIFont boldSystemFontOfSize:20.0f];
+        swim500mLabel2.backgroundColor = [UIColor yellowColor];
+        swim500mLabel2.text = [swim500m calculateCaloriesBurned];
+        swim500mLabel2.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:swim500mLabel2];
+    }
+
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
