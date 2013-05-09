@@ -22,7 +22,7 @@ typedef enum {
 @property int workoutTime;
 @property int caloriesBurned;
 @property int userWeight;
-@property NSString *technique;
+@property NSString *workoutName;
 @property NSArray *equipment;
 
 -(id)init;

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "workoutFactory.h"
 
 @interface ViewController : UIViewController
 
