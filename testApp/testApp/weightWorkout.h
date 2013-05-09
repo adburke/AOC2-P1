@@ -10,4 +10,7 @@
 
 @interface weightWorkout : baseWorkout
 
+@property int reps;
+@property int sets;
+
 @end

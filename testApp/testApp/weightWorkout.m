@@ -10,4 +10,6 @@
 
 @implementation weightWorkout
 
+@synthesize reps, sets;
+
 @end
