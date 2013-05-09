@@ -12,5 +12,6 @@
 
 @property int reps;
 @property int sets;
+@property int liftWeight;
 
 @end

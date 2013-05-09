@@ -8,9 +8,11 @@
 
 #import "weightWorkout.h"
 
+#define gravity 9.8
+
 @implementation weightWorkout
 
-@synthesize reps, sets;
+@synthesize reps, sets, liftWeight;
 
 -(id)init
 {
@@ -19,6 +21,7 @@
     {
         [self setReps:0];
         [self setSets:0];
+        [self setLiftWeight:0];
         [self setCaloriesBurned:0];
     }
     return self;
@@ -26,8 +29,8 @@
 
 -(NSString *)calculateCaloriesBurned
 {
-    [self setCaloriesBurned:(reps * sets)];
-    NSString *calBurnedMsg = [[NSString alloc] initWithFormat:@"This workout burned %i calories.", self.workoutTime ];
+    [self setCaloriesBurned:( (reps * sets) * ( (gravity * liftWeight)/1000) ) ];
+    NSString *calBurnedMsg = [[NSString alloc] initWithFormat:@"This workout burned %i calories.", self.caloriesBurned];
     return calBurnedMsg;
 }
 
