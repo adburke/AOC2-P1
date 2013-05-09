@@ -8,6 +8,6 @@
 
 #import "runWorkout.h"
 
-@implementation runningWorkout
+@implementation runWorkout
 
 @end

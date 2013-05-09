@@ -11,21 +11,23 @@
 @implementation baseWorkout
 
 // Synthesize for auto getter and setter
-@synthesize time, caloriesBurned, technique, equipment;
+@synthesize workoutTime, caloriesBurned, userWeight, technique, equipment;
 
 -(id)init
 {
     self = [super init];
     if (self)
     {
-        [self setTime:0];
+        [self setWorkoutTime:0];
         [self setCaloriesBurned:0];
+        [self setUserWeight:0];
         [self setTechnique:nil];
         [self setEquipment:nil];
         
         // Or this - Both set methods work
-//        time = 0;
+//        workoutTime = 0;
 //        caloriesBurned = 0;
+//        weight = 0;
 //        technique = nil;
 //        equipment = nil;
     }

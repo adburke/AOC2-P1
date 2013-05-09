@@ -26,8 +26,8 @@
 
 -(NSString *)calculateCaloriesBurned
 {
-    [self setCaloriesBurned:(reps)]
-    NSString *calBurnedMsg = [[NSString alloc] initWithFormat:@"This workout burned %i calories.", caloriesBurned];
+    [self setCaloriesBurned:(reps * sets)];
+    NSString *calBurnedMsg = [[NSString alloc] initWithFormat:@"This workout burned %i calories.", self.workoutTime ];
     return calBurnedMsg;
 }
 

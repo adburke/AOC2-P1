@@ -19,10 +19,13 @@ typedef enum {
     SWIM
 } workoutEnum;
 
-@property int time;
+@property int workoutTime;
 @property int caloriesBurned;
+@property int userWeight;
 @property NSString *technique;
 @property NSArray *equipment;
+
+-(id)init;
 
 -(NSString *)calculateCaloriesBurned;
 
