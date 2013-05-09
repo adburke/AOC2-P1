@@ -17,7 +17,7 @@
     self = [super init];
     if (self)
     {
-        [self setDistance:0];
+        [self setDistance:0.0f];
         [self setCaloriesBurned:0];
     }
     return self;
@@ -26,7 +26,7 @@
 -(NSString *)calculateCaloriesBurned
 {
     [self setCaloriesBurned:( self.userWeight * .75 * distance ) ];
-    NSString *calBurnedMsg = [[NSString alloc] initWithFormat:@"This workout burned %i calories.", self.caloriesBurned];
+    NSString *calBurnedMsg = [[NSString alloc] initWithFormat:@"This workout burned an estimated %i calories.", self.caloriesBurned];
     return calBurnedMsg;
 }
 

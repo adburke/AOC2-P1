@@ -11,6 +11,6 @@
 @interface runWorkout : baseWorkout
 
 // Miles
-@property int distance;
+@property float distance;
 
 @end

@@ -15,7 +15,7 @@
     if (workoutType == WEIGHT) {
         return [[weightWorkout alloc] init];
     } else if (workoutType == RUN) {
-        return [[weightWorkout alloc] init];
+        return [[runWorkout alloc] init];
     } else if (workoutType == SWIM) {
         return [[swimWorkout alloc] init];
     } else {

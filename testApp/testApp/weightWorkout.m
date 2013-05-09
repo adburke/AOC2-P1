@@ -30,7 +30,7 @@
 -(NSString *)calculateCaloriesBurned
 {
     [self setCaloriesBurned:( (reps * sets) * ( (gravity * liftWeight)/1000) ) ];
-    NSString *calBurnedMsg = [[NSString alloc] initWithFormat:@"This workout burned %i calories.", self.caloriesBurned];
+    NSString *calBurnedMsg = [[NSString alloc] initWithFormat:@"This workout burned an estimated %i calories.", self.caloriesBurned];
     return calBurnedMsg;
 }
 
