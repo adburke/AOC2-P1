@@ -23,10 +23,16 @@
     [squats setLiftWeight:35];
     [squats setWorkoutName:@"squat"];
     
-    UILabel *weightLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 10.0f, 150.0f, 40.0f)];
+    UILabel *weightLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 10.0f, 768.0f, 80.0f)];
     if (weightLabel) {
         weightLabel.font = [UIFont boldSystemFontOfSize:20.0f];
-        weightLabel.text = [NSString stringWithFormat:@"The weighted workout you created is called %@ and consists of %i sets of %i reps",[squats workoutName], [squats sets], [squats reps]];
+        weightLabel.backgroundColor = [UIColor lightGrayColor];
+        weightLabel.text = [NSString stringWithFormat:@"The weighted workout you created is named %@.\n It consists of %i sets of %i reps.",[squats workoutName], [squats sets], [squats reps]];
+        weightLabel.textAlignment = NSTextAlignmentCenter;
+        weightLabel.numberOfLines = 2;
+        // Just testing this out
+        // weightLabel.adjustsFontSizeToFitWidth = TRUE;
+        [self.view addSubview:weightLabel];
     }
     
     [super viewDidLoad];
