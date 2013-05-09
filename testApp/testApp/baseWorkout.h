@@ -24,6 +24,6 @@ typedef enum {
 @property NSString *technique;
 @property NSArray *equipment;
 
--(int)calculateCaloriesBurned;
+-(NSString *)calculateCaloriesBurned;
 
 @end
