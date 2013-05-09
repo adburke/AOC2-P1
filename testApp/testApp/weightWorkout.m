@@ -12,4 +12,23 @@
 
 @synthesize reps, sets;
 
+-(id)init
+{
+    self = [super init];
+    if (self)
+    {
+        [self setReps:0];
+        [self setSets:0];
+        [self setCaloriesBurned:0];
+    }
+    return self;
+}
+
+-(NSString *)calculateCaloriesBurned
+{
+    [self setCaloriesBurned:(reps)]
+    NSString *calBurnedMsg = [[NSString alloc] initWithFormat:@"This workout burned %i calories.", caloriesBurned];
+    return calBurnedMsg;
+}
+
 @end

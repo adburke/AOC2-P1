@@ -16,7 +16,8 @@
 -(id)init
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         [self setTime:0];
         [self setCaloriesBurned:0];
         [self setTechnique:nil];
