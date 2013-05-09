@@ -10,14 +10,14 @@
 
 @implementation swimWorkout
 
-@synthesize distance;
+@synthesize laps;
 
 -(id)init
 {
     self = [super init];
     if (self)
     {
-        [self setDistance:0];
+        [self setLaps:0];
         [self setCaloriesBurned:0];
     }
     return self;
@@ -25,7 +25,7 @@
 
 -(NSString *)calculateCaloriesBurned
 {
-    [self setCaloriesBurned:( self.userWeight * distance * 2.93 ) ];
+    [self setCaloriesBurned:( self.userWeight * (laps * 0.000621371) * 2.93 ) ];
     NSString *calBurnedMsg = [[NSString alloc] initWithFormat:@"This workout burned %i calories.", self.caloriesBurned];
     return calBurnedMsg;
 }

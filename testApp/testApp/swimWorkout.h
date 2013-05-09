@@ -10,7 +10,7 @@
 
 @interface swimWorkout : baseWorkout
 
-// Miles
-@property int distance;
+// Olympic pool 100m lap
+@property int laps;
 
 @end
