@@ -10,7 +10,6 @@
 
 @interface runWorkout : baseWorkout
 
-@property int speed;
 // Miles
 @property int distance;
 
