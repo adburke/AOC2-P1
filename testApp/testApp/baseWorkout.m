@@ -10,4 +10,6 @@
 
 @implementation baseWorkout
 
+@synthesize time, caloriesBurned, technique, equipment;
+
 @end

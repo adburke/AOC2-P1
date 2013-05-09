@@ -9,11 +9,21 @@
 #import <Foundation/Foundation.h>
 
 @interface baseWorkout : NSObject
+{
+    int workoutEnum;
+}
 
 typedef enum {
     WEIGHT = 0,
     RUN,
     SWIM
 } workoutEnum;
+
+@property int time;
+@property int caloriesBurned;
+@property NSString *technique;
+@property NSArray *equipment;
+
+-(int)calculateCaloriesBurned;
 
 @end
