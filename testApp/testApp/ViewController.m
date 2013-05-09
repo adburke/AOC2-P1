@@ -55,7 +55,7 @@
     // Create a run workout
     runWorkout *run10k = (runWorkout*)[workoutFactory createNewWorkout:RUN];
     if (run10k) {
-        // 10k to miles
+        // 10k in miles
         [run10k setDistance:6.21371];
         [run10k setUserWeight:160];
         [run10k setWorkoutName:@"10k Run"];
