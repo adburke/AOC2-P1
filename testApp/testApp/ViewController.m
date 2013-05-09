@@ -18,18 +18,25 @@
 {
     // Create a weight workout
     weightWorkout *squats = (weightWorkout*)[workoutFactory createNewWorkout:WEIGHT];
-    [squats setReps:10];
-    [squats setSets:3];
-    [squats setLiftWeight:35];
-    [squats setWorkoutName:@"squat"];
+    if (squats) {
+        [squats setReps:10];
+        [squats setSets:3];
+        [squats setLiftWeight:35];
+        [squats setWorkoutName:@"squat"];
+        // Seems like this could be simplified into the setter
+//        NSArray *squatEquip = @[@"45lb Bar", @"Rubber or Metal Plates"];
+        [squats setEquipment:@[@"45lb Bar", @"Rubber or Metal Plates"]];
+    }
     
-    UILabel *weightLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 10.0f, 768.0f, 80.0f)];
-    if (weightLabel) {
+    
+    UILabel *weightLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 10.0f, 768.0f,110.0f)];
+    if (weightLabel && squats) {
         weightLabel.font = [UIFont boldSystemFontOfSize:20.0f];
         weightLabel.backgroundColor = [UIColor lightGrayColor];
-        weightLabel.text = [NSString stringWithFormat:@"The weighted workout you created is named %@.\n It consists of %i sets of %i reps.",[squats workoutName], [squats sets], [squats reps]];
+        NSString *equipList = [squats.equipment componentsJoinedByString:@", "];
+        weightLabel.text = [NSString stringWithFormat:@"The weighted workout you created is named %@.\n It consists of %i sets of %i reps.\n Equipment used: %@",[squats workoutName], [squats sets], [squats reps], equipList];
         weightLabel.textAlignment = NSTextAlignmentCenter;
-        weightLabel.numberOfLines = 2;
+        weightLabel.numberOfLines = 5;
         // Just testing this out
         // weightLabel.adjustsFontSizeToFitWidth = TRUE;
         [self.view addSubview:weightLabel];
