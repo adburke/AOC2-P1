@@ -18,6 +18,11 @@
 		96CB24D7173B54EC00A38A64 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24D6173B54EC00A38A64 /* Default-568h@2x.png */; };
 		96CB24DA173B54EC00A38A64 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB24D9173B54EC00A38A64 /* ViewController.m */; };
 		96CB24DD173B54EC00A38A64 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24DB173B54EC00A38A64 /* ViewController.xib */; };
+		96CB24E5173B557400A38A64 /* workoutFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB24E4173B557400A38A64 /* workoutFactory.m */; };
+		96CB24E8173B55B100A38A64 /* baseWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB24E7173B55B100A38A64 /* baseWorkout.m */; };
+		96CB24F1173B577E00A38A64 /* weightWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB24F0173B577E00A38A64 /* weightWorkout.m */; };
+		96CB24F4173B579F00A38A64 /* runWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB24F3173B579F00A38A64 /* runWorkout.m */; };
+		96CB24F7173B57B900A38A64 /* swimWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CB24F6173B57B900A38A64 /* swimWorkout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,16 @@
 		96CB24D8173B54EC00A38A64 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		96CB24D9173B54EC00A38A64 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		96CB24DC173B54EC00A38A64 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		96CB24E3173B557400A38A64 /* workoutFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = workoutFactory.h; sourceTree = "<group>"; };
+		96CB24E4173B557400A38A64 /* workoutFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = workoutFactory.m; sourceTree = "<group>"; };
+		96CB24E6173B55B100A38A64 /* baseWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseWorkout.h; sourceTree = "<group>"; };
+		96CB24E7173B55B100A38A64 /* baseWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseWorkout.m; sourceTree = "<group>"; };
+		96CB24EF173B577E00A38A64 /* weightWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weightWorkout.h; sourceTree = "<group>"; };
+		96CB24F0173B577E00A38A64 /* weightWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = weightWorkout.m; sourceTree = "<group>"; };
+		96CB24F2173B579F00A38A64 /* runWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = runWorkout.h; sourceTree = "<group>"; };
+		96CB24F3173B579F00A38A64 /* runWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = runWorkout.m; sourceTree = "<group>"; };
+		96CB24F5173B57B900A38A64 /* swimWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swimWorkout.h; sourceTree = "<group>"; };
+		96CB24F6173B57B900A38A64 /* swimWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = swimWorkout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +104,16 @@
 				96CB24D9173B54EC00A38A64 /* ViewController.m */,
 				96CB24DB173B54EC00A38A64 /* ViewController.xib */,
 				96CB24C7173B54EC00A38A64 /* Supporting Files */,
+				96CB24E3173B557400A38A64 /* workoutFactory.h */,
+				96CB24E4173B557400A38A64 /* workoutFactory.m */,
+				96CB24E6173B55B100A38A64 /* baseWorkout.h */,
+				96CB24E7173B55B100A38A64 /* baseWorkout.m */,
+				96CB24EF173B577E00A38A64 /* weightWorkout.h */,
+				96CB24F0173B577E00A38A64 /* weightWorkout.m */,
+				96CB24F2173B579F00A38A64 /* runWorkout.h */,
+				96CB24F3173B579F00A38A64 /* runWorkout.m */,
+				96CB24F5173B57B900A38A64 /* swimWorkout.h */,
+				96CB24F6173B57B900A38A64 /* swimWorkout.m */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -176,6 +201,11 @@
 				96CB24CD173B54EC00A38A64 /* main.m in Sources */,
 				96CB24D1173B54EC00A38A64 /* AppDelegate.m in Sources */,
 				96CB24DA173B54EC00A38A64 /* ViewController.m in Sources */,
+				96CB24E5173B557400A38A64 /* workoutFactory.m in Sources */,
+				96CB24E8173B55B100A38A64 /* baseWorkout.m in Sources */,
+				96CB24F1173B577E00A38A64 /* weightWorkout.m in Sources */,
+				96CB24F4173B579F00A38A64 /* runWorkout.m in Sources */,
+				96CB24F7173B57B900A38A64 /* swimWorkout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
